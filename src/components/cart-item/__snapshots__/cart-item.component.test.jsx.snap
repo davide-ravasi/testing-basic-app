@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem component render basic component 1`] = `
+<styled.div>
+  <styled.img
+    alt="item"
+    src="https://i.ibb.co/bPmVXyP/black-converse.png"
+  />
+  <styled.div>
+    <span>
+      Black Converse
+    </span>
+    <span>
+      1
+       x $
+      110
+    </span>
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartIcon Component render basic component 1`] = `
+<styled.div
+  onClick={[MockFunction]}
+>
+  <Styled(Component) />
+  <ItemCountContainer>
+    0
+  </ItemCountContainer>
+</styled.div>
+`;
