@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout Item Component render basic component 1`] = `
+<styled.div>
+  <styled.div>
+    <img
+      alt="item"
+    />
+  </styled.div>
+  <styled.span />
+  <Styled(styled.span)>
+    <div
+      id="remove-item"
+      onClick={[Function]}
+    >
+      ❮
+    </div>
+    <span />
+    <div
+      onClick={[Function]}
+    >
+      ❯
+    </div>
+  </Styled(styled.span)>
+  <styled.span />
+  <styled.div
+    onClick={[Function]}
+  >
+    ✕
+  </styled.div>
+</styled.div>
+`;
