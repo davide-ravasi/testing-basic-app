@@ -18,7 +18,7 @@ export const CartIcon = ({ toggleCartHidden, itemCount }) => (
   </CartContainer>
 );
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 

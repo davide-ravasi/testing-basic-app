@@ -1,17 +1,17 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { CartIcon } from './cart-icon.component';
+import { CartIcon, mapDispatchToProps } from './cart-icon.component';
 
 // Create the mock store
-import configureMockStore from 'redux-mock-store';
-const mockStore = configureMockStore();
+//import configureMockStore from 'redux-mock-store';
+//const mockStore = configureMockStore();
 
 // testare toggle
 
 describe('CartIcon Component', () => {
     const mockToggle = jest.fn();
     const mockCount = 0;
-    let wrapper, mockProps, store;
+    let wrapper, mockProps;
 
 
     beforeEach(() => {
@@ -38,5 +38,15 @@ describe('CartIcon Component', () => {
         wrapper.simulate('click');
 
         expect(mockProps.toggleCartHidden).toHaveBeenCalled();
+    })
+
+    it('should dispatch actions.toggleCartHidden() when toggleCartHidden() is called', () => {
+        const dispatch = jest.fn();
+
+        const props = mapDispatchToProps(dispatch);
+
+        props.toggleCartHidden();
+
+        expect(dispatch).toHaveBeenCalled();
     })
 })
