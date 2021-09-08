@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CheckoutItem } from './checkout-item.component';
+import { CheckoutItem, mapDispatchToProps } from './checkout-item.component';
 
 describe('Checkout Item Component', () => {
     let wrapper, mockProps;
@@ -31,5 +31,32 @@ describe('Checkout Item Component', () => {
     it('call removeItem action', () => {
         wrapper.find('#remove-item').simulate('click');
         expect(mockProps.removeItem).toHaveBeenCalled();
+    })
+
+    it('call addItem action', () => {
+        wrapper.find('#add-item').simulate('click');
+        expect(mockProps.addItem).toHaveBeenCalled();
+    })
+
+    it('call clearItem action', () => {
+        wrapper.find('#clear-item').simulate('click');
+        expect(mockProps.clearItem).toHaveBeenCalled();
+    })
+
+    it('call dispatch when actions are called', () => {
+        const dispatch = jest.fn();
+        const props = mapDispatchToProps(dispatch);
+
+        props.clearItem();
+
+        expect(dispatch).toHaveBeenCalled();
+
+        props.addItem();
+
+        expect(dispatch).toHaveBeenCalled();
+
+        props.removeItem();
+
+        expect(dispatch).toHaveBeenCalled();
     })
 })

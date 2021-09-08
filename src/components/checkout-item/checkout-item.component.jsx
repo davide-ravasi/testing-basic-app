@@ -26,17 +26,17 @@ export const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
       <QuantityContainer>
         <div id="remove-item" onClick={() => removeItem(cartItem)}>&#10094;</div>
         <span>{quantity}</span>
-        <div onClick={() => addItem(cartItem)}>&#10095;</div>
+        <div id="add-item" onClick={() => addItem(cartItem)}>&#10095;</div>
       </QuantityContainer>
       <TextContainer>{price}</TextContainer>
-      <RemoveButtonContainer onClick={() => clearItem(cartItem)}>
+      <RemoveButtonContainer id="clear-item" onClick={() => clearItem(cartItem)}>
         &#10005;
       </RemoveButtonContainer>
     </CheckoutItemContainer>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   clearItem: item => dispatch(clearItemFromCart(item)),
   addItem: item => dispatch(addItem(item)),
   removeItem: item => dispatch(removeItem(item))

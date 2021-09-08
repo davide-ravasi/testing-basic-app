@@ -17,6 +17,7 @@ exports[`Checkout Item Component render basic component 1`] = `
     </div>
     <span />
     <div
+      id="add-item"
       onClick={[Function]}
     >
       ❯
@@ -24,6 +25,7 @@ exports[`Checkout Item Component render basic component 1`] = `
   </Styled(styled.span)>
   <styled.span />
   <styled.div
+    id="clear-item"
     onClick={[Function]}
   >
     ✕
