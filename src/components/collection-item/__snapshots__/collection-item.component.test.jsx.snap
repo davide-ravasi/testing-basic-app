@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collection-item component render collection item component 1`] = `
+<styled.div>
+  <styled.div
+    className="image"
+    imageUrl="https://i.ibb.co/bPmVXyP/black-converse.png"
+  />
+  <styled.div>
+    <styled.span
+      className="item-name"
+    >
+      Black Converse
+    </styled.span>
+    <styled.span
+      className="item-price"
+    >
+      110
+    </styled.span>
+  </styled.div>
+  <Styled(CustomButton)
+    className="item-add"
+    inverted={true}
+    onClick={[Function]}
+  >
+    Add to cart
+  </Styled(CustomButton)>
+</styled.div>
+`;
